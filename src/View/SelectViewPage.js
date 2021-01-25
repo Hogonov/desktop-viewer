@@ -17,7 +17,7 @@ export const SelectViewPage = () => {
 
     const getData = useCallback(async () => {
         try {
-            const fetched = await request(`http://localhost:5000/api/table/get_school`, 'GET', null);
+            const fetched = await request(`/api/table/get_school`, 'GET', null);
             setOptions(fetched);
         } catch (e) {
 

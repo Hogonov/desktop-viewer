@@ -56,8 +56,8 @@ export const ViewPage = () => {
 
     const getData = useCallback(async () => {
         try {
-            const fetched = await request(`http://localhost:5000/api/view/get/${schoolId}`, 'GET', null);
-            setView({...fetched, date: new Date()});
+            const fetched = await request(`/api/view/get/${schoolId}`, 'GET', null);
+            // setView({...fetched, date: new Date()});
         } catch (e) {
 
         }
@@ -65,8 +65,8 @@ export const ViewPage = () => {
 
     const getDataDirector = useCallback(async () => {
         try {
-            const fetched = await request(`http://localhost:5000/api/dir/get_data/${schoolId}`, 'GET', null);
-            setDir(fetched);
+            const fetched = await request(`/api/dir/get_data/${schoolId}`, 'GET', null);
+            setDir({...fetched, urlImage: fetched.urlImage});
             setFlagDirImage(true);
         } catch (e) {
 
@@ -75,7 +75,7 @@ export const ViewPage = () => {
 
     const getDataAd = useCallback(async () => {
         try {
-            const fetched = await request(`http://localhost:5000/api/ad/get_data_ad/${schoolId}`, 'GET', null, {"Content-Type": "text/plain"});
+            const fetched = await request(`/api/ad/get_data_ad/${schoolId}`, 'GET', null, {"Content-Type": "text/plain"});
             setAd({ad: fetched.ad});
             setFlagAd(true)
         } catch (e) {
@@ -85,7 +85,7 @@ export const ViewPage = () => {
 
     const getDataAnnouncement = useCallback(async () => {
         try {
-            const fetched = await request(`http://localhost:5000/api/view/get_announcement/${schoolId}`, 'GET', null);
+            const fetched = await request(`/api/view/get_announcement/${schoolId}`, 'GET', null);
             setAnnouncement(fetched);
         } catch (e) {
 
@@ -116,7 +116,7 @@ export const ViewPage = () => {
 
     const adSwitcher = () => {
         try {
-            setAdImage({url: `http://localhost:5000/api/ad/get/${ad.ad[countAd.count]._id}`, date: new Date()});
+            setAdImage({url: `/api/ad/get/${ad.ad[countAd.count]._id}`, date: new Date()});
             setFlagAd(true);
             setCountAd({count: countAd.count + 1});
             if (countAd.count === ad.ad.length - 1) {

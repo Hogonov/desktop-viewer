@@ -21,11 +21,11 @@
     "materialize-css": "^1.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3006 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"npm run start\" \"wait-on http://localhost:3006 && electron .\""
   },
   "main": "public/main.js",
   "eslintConfig": {
@@ -34,6 +34,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "http://localhost:5000",
   "browserslist": {
     "production": [
       ">0.2%",

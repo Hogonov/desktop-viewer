@@ -12,7 +12,8 @@ function createWindow() {
   mainWindow = new BrowserWindow({width: 900, height: 680});
   mainWindow.maximize()
   mainWindow.setFullScreen(true)
-  mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
+  mainWindow.loadURL(isDev ? 'http://localhost:3006' : `file://${path.join(__dirname, '../build/index.html')}`);
+  mainWindow.webContents.openDevTools() /// закоментить в релизной версии
   mainWindow.on('closed', () => mainWindow = null);
 }
 

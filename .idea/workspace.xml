@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/Themes/style1.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/Themes/style2.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/Themes/style3.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/Themes/style4.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Loader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/http.hook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/message.hook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SelectViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +40,15 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\src" />
+      <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,11 +57,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1611322086084</updated>
-      <workItem from="1611322098476" duration="2037000" />
+      <workItem from="1611322098476" duration="2511000" />
+      <workItem from="1611555374339" duration="7082000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
