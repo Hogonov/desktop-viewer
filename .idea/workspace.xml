@@ -1,26 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="">
+    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/src/View/ClassBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/SpecialCourseTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TimeBlock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/fonts/GothamPro.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/fonts/GothamPro_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/public/fonts/cour.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SelectViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style1.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style1.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style2.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style2.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style3.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style3.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style4.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style4.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/ViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1nQV1BxqGHemNHWpRwqlNcisH6l" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -32,19 +52,25 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/View" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\src\View" />
+      <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\src\public" />
       <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\src\public\img" />
       <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\src" />
       <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\public" />
     </key>
@@ -58,8 +84,17 @@
       <option name="presentableId" value="Default" />
       <updated>1611322086084</updated>
       <workItem from="1611322098476" duration="2511000" />
-      <workItem from="1611555374339" duration="7082000" />
+      <workItem from="1611555374339" duration="7282000" />
+      <workItem from="1611637273220" duration="41431000" />
     </task>
+    <task id="LOCAL-00001" summary="second commit">
+      <created>1611580782761</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611580782761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,5 +110,21 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/View/CostomTr.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -7,7 +7,7 @@ export default function App() {
     const routes = useRoutes();
     return (
         <Roter>
-            <div className="container">
+            <div>
                 {routes}
             </div>
         </Roter>
