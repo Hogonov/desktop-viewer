@@ -11,7 +11,12 @@ export const TimeBlock = props => {
         <div className={style1.timeBlock}>
             <div className={style1.hide}>6A</div>
             {Array.from(props.time, time => {
-                return <div key={time.index} className={style1.lessonTime}>{time.startTime}-{time.endTime}</div>
+                return <div
+                    key={time.index}
+                    className={`${style1.lessonTime}`}
+                >
+                    {time.startTime}-{time.endTime}
+                </div>
             })}
         </div>
     )

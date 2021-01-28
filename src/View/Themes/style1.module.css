@@ -37,7 +37,7 @@
     margin-top: 5px;
 }
 
-.director, .attention {
+.director, .attention, .logo {
     padding: 10px;
     margin: 10px;
     background: #baa7a4;
@@ -70,11 +70,23 @@
     font-size: 16px;
 }
 
+.logo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
 .logo img {
     padding-top: 5px;
     margin-top: 5px;
     width: 100px;
     height: 100px;
+}
+
+.logo div {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .phone {
@@ -128,14 +140,10 @@ table {
 
 .subject {
     vertical-align: top;
-    font-family: "Gotham Pro";
     border: 1px solid black;
-    margin-left: 2px;
-    margin-top: 2px;
 }
 
 .courseTime {
-    width: 144px;
 }
 
 .className, .lessonTime, .courseTime {
@@ -178,6 +186,10 @@ table {
     border: 1px solid black;
 }
 
+.courses tr td {
+    width: 100px;
+}
+
 .courseName {
     text-align: center;
     font-size: 15px;
@@ -192,25 +204,38 @@ td {
     background-color: #88e2ac;
 }
 
-.casino, .qr, .gif1, .gif2 {
-    align-self: center;
-    padding-left: 50px;
-    padding-top: 10px;
-    width: 100px;
-}
+
 
 .qr {
     align-items: flex-end;
-    width: 60px;
-    padding-left: 60px;
+    align-self: center;
+    margin-left: -10%;
 }
 
-.ad img{
-    margin-left: 25%;
+.ad img {
+    margin-left: 10%;
     margin-top: 20px;
+}
+
+.subjectOffice {
+    background-color: #e4dad8;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+
 }
 
 .foot {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 3fr 1fr
+}
+
+.subjectBlock {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+    margin-left: 2px;
+    margin-top: 2px;
+    font-family: "Gotham Pro";
 }

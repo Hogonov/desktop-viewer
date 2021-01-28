@@ -11,22 +11,19 @@ export const SpecialCourseTable = props => {
             <thead>
             <tr>
                 <th className={style1.hideTh}/>
-                <th className={style1.specCourses} colSpan="3">Спецкурсы</th>
+                <th className={style1.specCourses} colSpan="7">Спецкурсы</th>
             </tr>
             </thead>
             <tbody>
-                    <tr>
-                        <td className={style1.courseTime}>{props.course.specialCourse[0].time}</td>
-                        <td className={style1.courseName}>{props.course.specialCourse[0].name}</td>
-                        <td className={style1.courseTime}>{props.course.specialCourse[1].time}</td>
-                        <td className={style1.courseName}>{props.course.specialCourse[1].name}</td>
-                    </tr>
-                    <tr>
-                        <td className={style1.courseTime}>{props.course.specialCourse[2].time}</td>
-                        <td className={style1.courseName}>{props.course.specialCourse[2].name}</td>
-                        <td className={style1.courseTime}>{props.course.specialCourse[3].time}</td>
-                        <td className={style1.courseName}>{props.course.specialCourse[3].name}</td>
-                    </tr>
+            <tr>
+                {Array.from(props.course.specialCourse, course => {
+                    return (<>
+                            <td className={style1.courseTime}>{course.time}</td>
+                            <td className={style1.courseName}>{course.name}</td>
+                        </>
+                    )
+                })}
+            </tr>
             </tbody>
         </table>
     )

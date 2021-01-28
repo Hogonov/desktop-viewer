@@ -10,10 +10,12 @@ export const ClassBlock = props => {
         <div className={style1.classBlock}>
             <div className={style1.className}>{props.classroomName}</div>
             {Array.from(props.subjects, subject => {
-                return <div key={subject.index}
-                            className={`${style1.subject} ${subject.update && style1.change}`}
-                >{subject.name === '' ? '|' : `${subject.name} | ${subject.office} каб.`}
-                </div>
+                return (<div className={style1.subjectBlock} key={subject.index}>
+                        <div className={`${style1.subject} ${subject.update && style1.change}`}
+                        >{subject.name === '' ? '|' : `${subject.name}`}</div>
+                        <div className={style1.subjectOffice}>{subject.name === '' ? '|' : `${subject.office}`}</div>
+                    </div>
+                )
             })}
         </div>
     )

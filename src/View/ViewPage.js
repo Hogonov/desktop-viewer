@@ -39,6 +39,9 @@ export const ViewPage = () => {
     const [ad, setAd] = useState({ad: []});
     const [adImage, setAdImage] = useState({url: '', date: new Date() - 70000});
     const schoolId = useParams().id;
+    const [school, setSchool] = useState({
+        name: ''
+    })
 
     const [flagAd, setFlagAd] = useState(false);
     const [flagDirImage, setFlagDirImage] = useState(false);
@@ -52,6 +55,7 @@ export const ViewPage = () => {
             const fetched = await request(`/api/view/get/${schoolId}`, 'GET', null);
             setView({...fetched, date: new Date()});
             setFlagView(fetched.isDataReady)
+            setSchool({name: fetched.school})
         } catch (e) {
 
         }
@@ -100,17 +104,19 @@ export const ViewPage = () => {
 
     let idInterval
     const clockLauncher = () => {
-        console.log("gett")
-
-        idInterval = setInterval(() => {
-            let date = new Date();
-            setClock({
-                clock: date.toLocaleString("ru", {hour: 'numeric', minute: 'numeric'}),
-                clockDate: date.toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric'}),
-                clockDay: date.toLocaleString("ru", {weekday: 'long'})
-            });
-        }, 60000);
-
+        if (!idInterval) {
+            idInterval = setInterval(() => {
+                let date = new Date();
+                setClock({
+                    clock: date.toLocaleString("ru", {hour: 'numeric', minute: 'numeric'}),
+                    clockDate: date.toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric'}),
+                    clockDay: date.toLocaleString("ru", {weekday: 'long'})
+                });
+            }, 30000);
+        } else {
+            console.log("clear")
+            clearInterval(idInterval)
+        }
 
     };
     const announcementSwitcher = () => {
@@ -185,6 +191,14 @@ export const ViewPage = () => {
             <div className={style1.container}>
                 <div className={style1.logo}>
                     <img src={dir.urlImage} alt="logo"/>
+                    <div>
+                        {school.name}
+                    </div>
+                </div>
+
+                <div className={style1.attention}>
+                    <div className={style1.mainAtt}>Объявление</div>
+                    <div className={style1.txt}>{announcementText.text}</div>
                 </div>
                 <div className={style1.director}>
                     <div className={style1.mainDir}>Директор</div>
@@ -196,10 +210,6 @@ export const ViewPage = () => {
                     </div>
                 </div>
 
-                <div className={style1.attention}>
-                    <div className={style1.mainAtt}>Объявление</div>
-                    <div className={style1.txt}>{announcementText.text}</div>
-                </div>
             </div>
             }
 
@@ -240,7 +250,12 @@ export const ViewPage = () => {
                     course={specialCourses}
                 />
                 <div className={style1.ad}>
-                    <img src={adImage.url} width="600" height="100" alt="ad"/>
+                    <img src={adImage.url} width="400" height="100" alt="ad"/>
+                </div>
+                <div>
+                    <img className={style1.qr}
+                         src="http://qrcoder.ru/code/?localhost%3A3000&8&0"
+                         width="150" height="150" alt="qr"/>
                 </div>
             </footer>
 

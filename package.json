@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "watch": "nodemon --exec electron .",
-    "electron-dev": "concurrently \"npm run start\" \"wait-on http://localhost:3006 && npm run watch\""
+    "dev": "concurrently \"npm run start\" \"wait-on http://localhost:3006 && npm run watch\""
   },
   "main": "public/main.js",
   "eslintConfig": {
