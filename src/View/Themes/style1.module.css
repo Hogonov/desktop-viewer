@@ -1,14 +1,3 @@
-@font-face {
-    font-family: "Courier New";
-    src: url(../../public/fonts/cour.ttf);
-
-    font-family: "Gotham Pro";
-    src: url(../../public/fonts/GothamPro.ttf);
-
-    font-family: "Gotham Pro bold";
-    src: url(../../public/fonts/GothamPro_bold.ttf);
-}
-
 .header {
     text-align: center;
     font-family: "Courier New";
@@ -30,27 +19,44 @@
     width: 32%;
 }
 
-.container, footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 5px;
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
-.director, .attention, .logo {
-    padding: 10px;
-    margin: 10px;
+.attention {
+    padding-left: 5px;
+    margin-left: 5%;
+    background: #baa7a4;
+    width: 90%;
+}
+.attention div {
+
+}
+
+.logo {
+    padding-left: 10px;
+
     background: #baa7a4;
 }
 
 .director {
-    width: 40%;
-    text-align: center;
-    margin-left: 44px;
+    padding-left: 10px;
+    background: #baa7a4;
+    font-family: "Courier New";
+}
+.director h3 {
+    margin-top: 10px;
+    font-size: 40px;
+}
+.director h4 {
+    margin-top: 5px;
+    font-size: 30px;
 }
 
 .attention {
-    margin-right: 0px;
     padding: 10px;
 }
 
@@ -60,14 +66,16 @@
 }
 
 .mainAtt {
-    font-family: "Courier New";
-    font-size: 26px;
-    color: #ed4c4c;
+    font-family: "Courier New Bold";
+    font-size: 30px;
+    text-align: center;
+    margin-top: -10px;
 }
 
 .txt {
-    font-family: "Gotham Pro";
+    font-family: "Gotham Pro Light";
     font-size: 16px;
+
 }
 
 .logo {
@@ -77,12 +85,13 @@
 
 .logo img {
     padding-top: 5px;
+    padding-bottom: 5px;
     margin-top: 5px;
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 130px;
 }
 
-.logo div {
+.logo h4 {
     padding-left: 40px;
     padding-right: 40px;
     margin-top: 10px;
@@ -97,10 +106,7 @@
     margin-right: 10px;
 }
 
-table {
-    width: 100%;
-    height: min-content;
-}
+
 
 .hide {
     background-color: white;
@@ -112,38 +118,38 @@ table {
     height: 20%;
     width: 100%;
     text-align: center;
-    border: black;
     display: grid;
     grid-template-columns: repeat(11, 1fr);
 }
 
 
-.secondTable {
+.secondTable .timeBlock{
 
 }
 
 .timeBlock {
-    margin-top: 4px;
+    margin-right: -6px;
 }
 
 
 .classBlock .className {
-    border: 1px solid black;
-    margin-left: 2px;
-    margin-top: 2px;
+    border-bottom: 1px solid black;
 }
 
 .classBlock tr td {
     font-size: 15px;
     text-align: center;
 }
-
+.classBlock {
+    margin-left: 4px;
+}
 .subject {
-    vertical-align: top;
-    border: 1px solid black;
+    border-right: 1px solid black;
+    font-family: "Gotham Pro Light";
 }
 
 .courseTime {
+    text-align: center;
 }
 
 .className, .lessonTime, .courseTime {
@@ -155,26 +161,24 @@ table {
 }
 
 .lessonTime {
-    border: 1px solid black;
-    margin-top: 2px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
 }
 
 .courseTime, .specCourses {
     background-color: #9cb6bc;
-    text-align: center;
 }
+
 
 .specCourses {
     padding: 2px 0 0 10px;
     font-family: "Courier New";
-    text-align: center;
     border: 1px solid black;
 }
 
 .courses {
-    margin-top: 20px;
-    /*width: 40%;*/
-    text-align: center;
+    margin-top: 50px;
 }
 
 .hideTh {
@@ -197,7 +201,7 @@ table {
 
 td {
     font-family: "Gotham Pro";
-    height: min-content;
+    padding: 2px 0 0 10px;
 }
 
 .change {
@@ -206,36 +210,35 @@ td {
 
 
 
-.qr {
-    align-items: flex-end;
-    align-self: center;
-    margin-left: -10%;
+.qr img{
+    width: 150px;
+    height: 150px;
+    margin-left: 34%;
 }
 
 .ad img {
-    margin-left: 10%;
+    margin-left: 25%;
     margin-top: 20px;
+    height: 100px;
+    width: 200px;
 }
 
 .subjectOffice {
     background-color: #e4dad8;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
     border-right: 1px solid black;
     text-align: center;
-
+    font-family: "Gotham Pro Light";
 }
 
 .foot {
     display: grid;
-    grid-template-columns: 3fr 3fr 1fr
+    grid-template-columns: 5fr 1fr 1fr
 }
 
 .subjectBlock {
     display: grid;
     grid-template-columns: 2fr 1fr;
     text-align: center;
-    margin-left: 2px;
-    margin-top: 2px;
-    font-family: "Gotham Pro";
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }

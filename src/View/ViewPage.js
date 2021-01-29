@@ -1,11 +1,8 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import {useParams} from 'react-router-dom';
 import {useHttp} from "../hooks/http.hook";
 import {Loader} from "../components/Loader";
 import style1 from './Themes/style1.module.css'
-import style2 from './Themes/style2.module.css'
-import style3 from './Themes/style3.module.css'
-import style4 from './Themes/style4.module.css'
 import {TimeBlock} from "./TimeBlock";
 import {ClassBlock} from "./ClassBlock";
 import {SpecialCourseTable} from "./SpecialCourseTable";
@@ -102,23 +99,21 @@ export const ViewPage = () => {
         }
     }, [schoolId, request])
 
-    let idInterval
-    const clockLauncher = () => {
-        if (!idInterval) {
-            idInterval = setInterval(() => {
-                let date = new Date();
-                setClock({
-                    clock: date.toLocaleString("ru", {hour: 'numeric', minute: 'numeric'}),
-                    clockDate: date.toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric'}),
-                    clockDay: date.toLocaleString("ru", {weekday: 'long'})
-                });
-            }, 30000);
-        } else {
-            console.log("clear")
-            clearInterval(idInterval)
-        }
 
+    const clockLauncher = () => {
+        let timerID = setInterval(() => tick(), 1000)
+        return () => clearInterval(timerID)
     };
+
+    const tick = () => {
+        let date = new Date();
+        setClock({
+            clock: date.toLocaleString("ru", {hour: 'numeric', minute: 'numeric', second: 'numeric'}),
+            clockDate: date.toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric'}),
+            clockDay: date.toLocaleString("ru", {weekday: 'long'})
+        });
+    }
+
     const announcementSwitcher = () => {
         try {
             setAnnouncementText({text: announcement.announcements[count.count], date: new Date()});
@@ -169,7 +164,7 @@ export const ViewPage = () => {
             adSwitcher();
         }
 
-    }, [clockLauncher, announcementSwitcher, adSwitcher]);
+    });
 
     if (!flagAd || !flagDirImage || !flagView || !flagAnnouncement) {
         return <Loader/>
@@ -187,31 +182,26 @@ export const ViewPage = () => {
                                                                                className="red-text">{view.editDate}</h6>
                 </div>
             </header>
-            {flagDirImage &&
+
             <div className={style1.container}>
                 <div className={style1.logo}>
                     <img src={dir.urlImage} alt="logo"/>
-                    <div>
-                        {school.name}
-                    </div>
+                    <h4>{school.name}</h4>
                 </div>
 
                 <div className={style1.attention}>
                     <div className={style1.mainAtt}>Объявление</div>
                     <div className={style1.txt}>{announcementText.text}</div>
                 </div>
-                <div className={style1.director}>
-                    <div className={style1.mainDir}>Директор</div>
-                    <div className="txt">
-                        <hr color="grey" size="0.1"/>
-                        {dir.name}<br/>
-                        <svg className={style1.phone}/>
-                        {dir.text}
-                    </div>
-                </div>
 
+                <div className={style1.director}>
+                    <h3>Директор</h3>
+                    <h4>
+                        <svg className={style1.phone}/>
+                        {dir.name}</h4>
+                </div>
             </div>
-            }
+
 
             <div className={style1.firstTable}>
 
@@ -250,12 +240,12 @@ export const ViewPage = () => {
                     course={specialCourses}
                 />
                 <div className={style1.ad}>
-                    <img src={adImage.url} width="400" height="100" alt="ad"/>
+                    <img src={adImage.url} alt="ad"/>
                 </div>
-                <div>
-                    <img className={style1.qr}
-                         src="http://qrcoder.ru/code/?localhost%3A3000&8&0"
-                         width="150" height="150" alt="qr"/>
+                <div className={style1.qr}>
+                    <img
+                        src="http://qrcoder.ru/code/?localhost%3A3000&8&0"
+                        alt="qr"/>
                 </div>
             </footer>
 
