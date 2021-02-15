@@ -11,7 +11,7 @@ export const useRoutes = () => {
             <Route path="/" exact>
                 <SelectViewPage/>
             </Route>
-            <Route path="/view/:id" exact>
+            <Route path="/view/:id/:name" exact>
                 <ViewPage/>
             </Route>
             <Redirect to="/"/>

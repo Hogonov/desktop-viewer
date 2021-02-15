@@ -1,0 +1,58 @@
+.main {
+    text-align: center;
+
+}
+
+.logo {
+    background-image: url("../../public/img/blueLogoItSchool.svg");
+    height: 191px;
+    width: 200px;
+    margin-top: 2%;
+}
+
+.form {
+    padding: 20px;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 2%;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.1), 30px 40px 40px rgba(0, 0, 0, 0.08), 40px 60px 60px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+selector {
+    border-color: #3a73ab;
+}
+.selector {
+    margin-top: 15px;
+}
+
+.selector:focus {
+
+}
+
+.selector:active {
+
+}
+
+
+.button {
+    background-color: #6185c3;
+    margin-top: 30px;
+    font-family: "GothamProBold", serif;
+}
+
+.button:hover {
+    background-color: #7ba5c6;
+}
+
+.button:focus {
+    background-color: #3a73ab;
+}

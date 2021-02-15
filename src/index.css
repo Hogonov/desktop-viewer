@@ -1,17 +1,43 @@
 @import "~materialize-css/dist/css/materialize.min.css";
-
 @font-face {
     font-family: "Courier New";
     src: url(./public/fonts/cour.ttf);
-
+}
+@font-face {
     font-family: "Gotham Pro";
     src: url(./public/fonts/GothamPro.ttf);
-
+}
+@font-face {
     font-family: "Gotham Pro bold";
     src: url(./public/fonts/GothamPro_bold.ttf);
-
+}
+@font-face {
     font-family: "Courier New Bold";
     src: url(./public/fonts/COURBD.TTF);
+}
+@font-face {
+    font-family: "CourierNewRegular";
+    src: url(./public/fonts/CourierNewRegular.ttf);
+}
+@font-face {
+    font-family: "GothamProRegular";
+    src: url(./public/fonts/GothamProRegular.ttf);
+}
+@font-face {
+    font-family: "GothamProBold";
+    src: url(./public/fonts/GothamProBold.ttf);
+}
+@font-face {
+    font-family: "RobotoSlabBold";
+    src: url(./public/fonts/RobotoSlabBold.ttf);
+}
+
+
+.anotherBack{
+    background-color: #F1F1F1;
+}
+.whiteBack {
+    background-color: #ffffff;
 }
 
 html {

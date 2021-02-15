@@ -1,134 +1,244 @@
-@font-face {
-    font-family: "Courier New";
-    src: url(../../public/fonts/cour.ttf);
-
-    font-family: "Gotham Pro";
-    src: url(../../public/fonts/GothamPro.ttf);
-
-    font-family: "Gotham Pro bold";
-    src: url(../../public/fonts/GothamPro_bold.ttf);
-}
-
-
-.header{
+.header {
     text-align: center;
     font-family: "Courier New";
-    background: #6a0115;
+    background: #6A0115;/*1111*/
     color: #e4dbd9;
 }
 
-.timetable{
+.timetable {
     font-size: 30px;
     padding-top: 10px;
 }
 
-.time{
+.time {
     font-size: 16px;
     padding-bottom: 15px;
 }
 
-.hr{
+.hr {
     width: 32%;
 }
 
-.container, footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-top: 5px;
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 35px;
+    margin-bottom: 35px;
 }
 
-.director, .attention{
+.attention {
     padding: 10px;
-    margin: 10px;
-    background: white;
-    border: 2px solid #770f10;
+    margin-left: 5%;
+    background-color: white; /*1111*/
+    border: 4px solid #D36789; /*1111*/
+    width: 90%;
+}
+.attention div {
+
 }
 
-.director{
-    width: 40%;
-    text-align: center;
-    margin-left: 15px;
+.logo {
+    padding-left: 10px;
+    background-color: white; /*1111*/
+    border: 4px solid #D36789; /*1111*/
 }
 
-.attention{
-    margin-right: 0px;
-    padding: 10px;
+.director {
+    padding-left: 10px;
+    background-color: white; /*1111*/
+    border: 4px solid #D36789; /*1111*/
+    font-family: "Courier New", serif;
 }
-.mainDir{
-    font-family: "Courier New";
-    font-size: 26px;
-}
-
-.mainAtt{
-    font-family: "Courier New";
-    font-size: 26px;
-    color: #ed4c4c;
-}
-
-.txt{
-    font-family: "Gotham Pro";
-    font-size: 16px;
-}
-.logo{
-    padding-top: 5px;
-    margin-top: 5px;
-    width: 100px;
-}
-.phone{
-    width: 15px;
-}
-
-table{
+.director h3 {
     margin-top: 10px;
+    font-size: 40px;
+}
+.director h4 {
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+
+.mainDir {
+    font-family: "Courier New", serif;
+    font-size: 26px;
+}
+
+.mainAtt {
+    font-family: "Courier New Bold", serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.txt {
+    font-family: "Gotham Pro Light", serif;
+    font-size: 16px;
+
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.logo img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    width: 160px;
+    height: 130px;
+}
+
+.logo h4 {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.phone {
+    background-image: url("../../public/img/phone.svg");
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+
+
+
+.hide {
+    background-color: white;
+    color: white;
+}
+
+
+.firstTable, .secondTable {
+    height: 20%;
     width: 100%;
-    border-collapse: collapse;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+}
+
+
+.secondTable .timeBlock{
+
+}
+
+.timeBlock {
+    margin-right: -6px;
+}
+
+
+.classBlock .className {
+    border-bottom: 1px solid black;
+}
+
+.classBlock tr td {
+    font-size: 15px;
+    text-align: center;
+}
+.classBlock {
+    margin-left: 4px;
+}
+.subject {
+    border-right: 1px solid black;
+    font-family: "Gotham Pro Light", serif;
+}
+
+.courseTime {
     text-align: center;
 }
 
-.className, .lessonTime, .courseTime{
-    padding: 2px;
-    background-color: #a0a0a0;
-    border-color: white;
-    font-family: "Gotham Pro bold";
-    font-size: 12px;
+.className, .lessonTime, .courseTime {
+    background-color: #A0A0A0; /*1111*/
+    font-family: "Gotham Pro bold", serif;
+    font-size: 15px;
+    text-align: center;
+    border: black;
 }
 
-.courseTime, .specCourses{
-    background-color: #b7b2b3;
-    text-align: center;
+.lessonTime {
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
 }
-.specCourses{
+
+.courseTime, .specCourses {
+    background-color: #B7B2B3; /*1111*/
+}
+
+
+.specCourses {
     padding: 2px 0 0 10px;
-    row-span: 5;
-    font-family: "Courier New";
-    text-align: left;
-}
-#courses{
-    margin-top: 20px;
-    width: 45%;
-}
-th{
-    border: 1px solid white;
-}
-td {
-    border: 1px solid grey;
-    font-family: "Gotham Pro";
-    font-size: 9px;
-}
-.change{
-    background-color: #e70024;
+    font-family: "Courier New", serif;
+    border: 1px solid black;
 }
 
-.casino, .qr, .gif1, .gif2{
-    align-self: center;
-    padding-left: 50px;
-    padding-top: 10px;
+.courses {
+    margin-top: 50px;
+}
+
+.hideTh {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.courses tr td, .courses tr {
+    border: 1px solid black;
+}
+
+.courses tr td {
     width: 100px;
 }
 
-.qr{
-    align-items: flex-end;
-    width: 60px;
-    padding-left: 60px;
+.courseName {
+    text-align: center;
+    font-size: 15px;
+}
+
+td {
+    font-family: "Gotham Pro", serif;
+    padding: 2px 0 0 10px;
+}
+
+.change {
+    background-color: #E70024;/*1111*/
+}
+
+
+.qr img{
+    width: 150px;
+    height: 150px;
+    margin-left: 34%;
+}
+
+.ad img {
+    margin-left: 25%;
+    margin-top: 20px;
+    height: 100px;
+    width: 200px;
+}
+
+.subjectOffice {
+    background-color: #D0D0D2;/*1111*/
+    border-right: 1px solid black;
+    text-align: center;
+    font-family: "Gotham Pro Light", serif;
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr
+}
+
+.subjectBlock {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }

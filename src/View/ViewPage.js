@@ -3,13 +3,16 @@ import {useParams} from 'react-router-dom';
 import {useHttp} from "../hooks/http.hook";
 import {Loader} from "../components/Loader";
 import style1 from './Themes/style1.module.css'
+import style2 from './Themes/style2.module.css'
+import style3 from './Themes/style3.module.css'
+import style4 from './Themes/style4.module.css'
 import {TimeBlock} from "./TimeBlock";
 import {ClassBlock} from "./ClassBlock";
 import {SpecialCourseTable} from "./SpecialCourseTable";
 
 
 export const ViewPage = () => {
-
+    const style = {style1, style2, style3, style4}
     const {request} = useHttp();
     const [view, setView] = useState({
         date: new Date(),
@@ -36,6 +39,7 @@ export const ViewPage = () => {
     const [ad, setAd] = useState({ad: []});
     const [adImage, setAdImage] = useState({url: '', date: new Date() - 70000});
     const schoolId = useParams().id;
+    const theme = useParams().name;
     const [school, setSchool] = useState({
         name: ''
     })
@@ -163,7 +167,6 @@ export const ViewPage = () => {
         if (new Date() - adImage.date >= 60000) {
             adSwitcher();
         }
-
     });
 
     if (!flagAd || !flagDirImage || !flagView || !flagAnnouncement) {
@@ -172,44 +175,45 @@ export const ViewPage = () => {
 
     return (
         <div>
-            <header className={style1.header}>
-                <div className={style1.timetable}>
+            <header className={style[theme].header}>
+                <div className={style[theme].timetable}>
                     Расписание занятий
                 </div>
-                <hr className={style1.hr}/>
-                <div id="time" className={style1.time}>
+                <hr className={style[theme].hr}/>
+                <div id="time" className={style[theme].time}>
                     {clock.clock} | {clock.clockDate} | {clock.clockDay} | <h6 style={{display: 'inline-block'}}
                                                                                className="red-text">{view.editDate}</h6>
                 </div>
             </header>
 
-            <div className={style1.container}>
-                <div className={style1.logo}>
+            <div className={style[theme].container}>
+                <div className={style[theme].logo}>
                     <img src={dir.urlImage} alt="logo"/>
                     <h4>{school.name}</h4>
                 </div>
 
-                <div className={style1.attention}>
-                    <div className={style1.mainAtt}>Объявление</div>
-                    <div className={style1.txt}>{announcementText.text}</div>
+                <div className={style[theme].attention}>
+                    <div className={style[theme].mainAtt}>Объявление</div>
+                    <div className={style[theme].txt}>{announcementText.text}</div>
                 </div>
 
-                <div className={style1.director}>
+                <div className={style[theme].director}>
                     <h3>Директор</h3>
                     <h4>
-                        <svg className={style1.phone}/>
+                        <svg className={style[theme].phone}/>
                         {dir.name}</h4>
                 </div>
             </div>
 
 
-            <div className={style1.firstTable}>
+            <div className={style[theme].firstTable}>
 
-                <TimeBlock time={view.times}/>
+                <TimeBlock time={view.times}  style={style[theme]}/>
                 {Array.from(view.classrooms, classroom => {
                     return (
                         <div key={classroom.index}>
                             <ClassBlock
+                                style={style[theme]}
                                 classroomName={classroom.name}
                                 subjects={classroom.subjects}
                                 time={view.times}
@@ -218,13 +222,14 @@ export const ViewPage = () => {
                     )
                 })}
             </div>
-            <div className={style1.secondTable}>
+            <div className={style[theme].secondTable}>
 
-                <TimeBlock time={view.times}/>
+                <TimeBlock time={view.times}  style={style[theme]}/>
                 {Array.from(view.classrooms, classroom => {
                     return (
                         <div key={classroom.index}>
                             <ClassBlock
+                                style={style[theme]}
                                 classroomName={classroom.name}
                                 subjects={classroom.subjects}
                                 time={view.times}
@@ -235,14 +240,15 @@ export const ViewPage = () => {
             </div>
 
 
-            <footer className={style1.foot}>
+            <footer className={style[theme].foot}>
                 <SpecialCourseTable
+                    style={style[theme]}
                     course={specialCourses}
                 />
-                <div className={style1.ad}>
+                <div className={style[theme].ad}>
                     <img src={adImage.url} alt="ad"/>
                 </div>
-                <div className={style1.qr}>
+                <div className={style[theme].qr}>
                     <img
                         src="http://qrcoder.ru/code/?localhost%3A3000&8&0"
                         alt="qr"/>

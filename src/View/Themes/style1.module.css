@@ -1,7 +1,7 @@
 .header {
     text-align: center;
     font-family: "Courier New";
-    background: #2f4c58;
+    background: #2f4c58;/*1111*/
     color: #e4dbd9;
 }
 
@@ -27,9 +27,9 @@
 }
 
 .attention {
-    padding-left: 5px;
+    padding: 10px;
     margin-left: 5%;
-    background: #baa7a4;
+    background: #e4dbd9;/*1111*/
     width: 90%;
 }
 .attention div {
@@ -38,14 +38,13 @@
 
 .logo {
     padding-left: 10px;
-
-    background: #baa7a4;
+    background: #e4dbd9;/*1111*/
 }
 
 .director {
     padding-left: 10px;
-    background: #baa7a4;
-    font-family: "Courier New";
+    background: #e4dbd9;/*1111*/
+    font-family: "Courier New", serif;
 }
 .director h3 {
     margin-top: 10px;
@@ -56,24 +55,21 @@
     font-size: 30px;
 }
 
-.attention {
-    padding: 10px;
-}
 
 .mainDir {
-    font-family: "Courier New";
+    font-family: "Courier New", serif;
     font-size: 26px;
 }
 
 .mainAtt {
-    font-family: "Courier New Bold";
+    font-family: "Courier New Bold", serif;
     font-size: 30px;
     text-align: center;
     margin-top: -10px;
 }
 
 .txt {
-    font-family: "Gotham Pro Light";
+    font-family: "Gotham Pro Light", serif;
     font-size: 16px;
 
 }
@@ -145,7 +141,7 @@
 }
 .subject {
     border-right: 1px solid black;
-    font-family: "Gotham Pro Light";
+    font-family: "Gotham Pro Light", serif;
 }
 
 .courseTime {
@@ -153,8 +149,8 @@
 }
 
 .className, .lessonTime, .courseTime {
-    background-color: #6795a3;
-    font-family: "Gotham Pro bold";
+    background-color: #6795a3; /*1111*/
+    font-family: "Gotham Pro bold", serif;
     font-size: 15px;
     text-align: center;
     border: black;
@@ -167,13 +163,13 @@
 }
 
 .courseTime, .specCourses {
-    background-color: #9cb6bc;
+    background-color: #9cb6bc; /*1111*/
 }
 
 
 .specCourses {
     padding: 2px 0 0 10px;
-    font-family: "Courier New";
+    font-family: "Courier New", serif;
     border: 1px solid black;
 }
 
@@ -182,6 +178,8 @@
 }
 
 .hideTh {
+    border-top: 1px solid white;
+    border-left: 1px solid white;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
 }
@@ -200,14 +198,13 @@
 }
 
 td {
-    font-family: "Gotham Pro";
+    font-family: "Gotham Pro", serif;
     padding: 2px 0 0 10px;
 }
 
 .change {
-    background-color: #88e2ac;
+    background-color: #88e2ac;/*1111*/
 }
-
 
 
 .qr img{
@@ -224,10 +221,10 @@ td {
 }
 
 .subjectOffice {
-    background-color: #e4dad8;
+    background-color: #e4dbd9;/*1111*/
     border-right: 1px solid black;
     text-align: center;
-    font-family: "Gotham Pro Light";
+    font-family: "Gotham Pro Light", serif;
 }
 
 .foot {

@@ -5,14 +5,22 @@ import {useHttp} from "../hooks/http.hook";
 import Select from "react-select";
 import {Button} from "react-bootstrap";
 import {Loader} from "../components/Loader";
+import style from './Themes/SelectsViewPage.module.css'
 
 
 export const SelectViewPage = () => {
     const message = useMessage();
     const {loading, request, error, clearError} = useHttp();
     const [options, setOptions] = useState({schools: []});
+    const themes = [
+        {label: 'Оформление 1', value: 'style1'},
+        {label: 'Оформление 2', value: 'style2'},
+        {label: 'Оформление 3', value: 'style3'},
+        {label: 'Оформление 4', value: 'style4'}
+    ]
     const [form, setForm] = useState({
-        schoolName: ''
+        school: '',
+        theme: {label: 'Оформление 1', value: 'style1'},
     });
 
     const getData = useCallback(async () => {
@@ -29,44 +37,53 @@ export const SelectViewPage = () => {
     }, [getData]);
 
 
-    const changeHandlerSchool = event => {
-        setForm({...form, schoolName: event.value});
+    const changeHandler = (event, action) => {
+        setForm({...form, [action.name]: event});
     };
+    const viewHandler = () => {
+        if (form.school === '') {
+            message('Выберете школу')
+        } else {
+            window.location.href = `/view/${form.school.value}/${form.theme.value}`
+        }
+    }
 
-    if(loading){
+    if (loading) {
         return <Loader/>
     }
 
     return (
-        <div className="row">
-            <h1/>
-            <div className="col s6 offset-s3">
-                <div className="card blue darken-1">
-                    <div className="card-content white-text">
-                        <span className="card-title">Добавление данных</span>
-                        <div>
+        <div className={style.main}>
+            <svg className={style.logo}/>
+            <div className={style.form}>
+                <div className={style.title}>Настройки приложения</div>
+                <Select
 
-                            <label htmlFor="school" className="white-text">Класс</label>
-                            <Select onChange={changeHandlerSchool}
-                                    id="school"
-                                    placeholder="Выберите школу"
-                                    className="black-text"
-                                    options={options.schools}
-                                    name="school"
-                            />
-                        </div>
-                    </div>
-                    <div className="card-action">
-                        <Button
-                            className="btn yellow darken-4"
-                            style={{marginRight: 10}}
-                            disabled={loading}
-                            href={`/view/${form.schoolName}`}
-                        >
-                            Выбрать школу
-                        </Button>
-                    </div>
-                </div>
+                    onChange={changeHandler}
+                    id="school"
+                    placeholder="Выберите школу"
+                    className={style.selector}
+                    options={options.schools}
+                    value={form.school}
+                    name="school"
+                />
+                <Select
+                    onChange={changeHandler}
+                    id="theme"
+                    placeholder="Выберите оформление расписания"
+                    className={`${style.selector}`}
+                    options={themes}
+                    value={form.theme}
+                    name="theme"
+                />
+                <Button
+                    className={`btn ${style.button}`}
+                    style={{marginRight: 10}}
+                    disabled={loading}
+                    onClick={viewHandler}
+                >
+                    Выбрать школу
+                </Button>
             </div>
         </div>
     )
