@@ -5,11 +5,11 @@ export const TimeBlock = props => {
 
     return (
         <div className={props.style.timeBlock}>
-            <div className={props.style.hide}>6A</div>
+            <div className={props.style.hide}>|</div>
             {Array.from(props.time, time => {
                 return <div
                     key={time.index}
-                    className={`${props.style.lessonTime}`}
+                    className={`${props.style.lessonTime} ${time.index === props.time.length ? props.style.lastLessonTime : ''}`}
                 >
                     {time.startTime}-{time.endTime}
                 </div>

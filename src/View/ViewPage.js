@@ -9,6 +9,7 @@ import style4 from './Themes/style4.module.css'
 import {TimeBlock} from "./TimeBlock";
 import {ClassBlock} from "./ClassBlock";
 import {SpecialCourseTable} from "./SpecialCourseTable";
+import settings from '../config/settings.json'
 
 
 export const ViewPage = () => {
@@ -53,7 +54,7 @@ export const ViewPage = () => {
 
     const getData = useCallback(async () => {
         try {
-            const fetched = await request(`/api/view/get/${schoolId}`, 'GET', null);
+            const fetched = await request(`${settings.url}/api/view/get/${schoolId}`, 'GET', null);
             setView({...fetched, date: new Date()});
             setFlagView(fetched.isDataReady)
             setSchool({name: fetched.school})
@@ -64,8 +65,8 @@ export const ViewPage = () => {
 
     const getDataDirector = useCallback(async () => {
         try {
-            const fetched = await request(`/api/dir/get_data/${schoolId}`, 'GET', null);
-            setDir({...fetched, urlImage: fetched.urlImage});
+            const fetched = await request(`${settings.url}/api/dir/get_data/${schoolId}`, 'GET', null);
+            setDir({...fetched, urlImage: settings.url + fetched.urlImage});
             setFlagDirImage(fetched.isDataReady);
         } catch (e) {
 
@@ -74,7 +75,7 @@ export const ViewPage = () => {
 
     const getDataAd = useCallback(async () => {
         try {
-            const fetched = await request(`/api/ad/get_data_ad/${schoolId}`, 'GET', null, {"Content-Type": "text/plain"});
+            const fetched = await request(`${settings.url}/api/ad/get_data_ad/${schoolId}`, 'GET', null, {"Content-Type": "text/plain"});
             setAd({ad: fetched.ad});
             setFlagAd(fetched.isDataReady)
         } catch (e) {
@@ -84,7 +85,7 @@ export const ViewPage = () => {
 
     const getDataAnnouncement = useCallback(async () => {
         try {
-            const fetched = await request(`/api/view/get_announcement/${schoolId}`, 'GET', null);
+            const fetched = await request(`${settings.url}/api/view/get_announcement/${schoolId}`, 'GET', null);
             setAnnouncement(fetched);
             setAnnouncementText({text: fetched.announcements[count.count], date: new Date()});
             setFlagAnnouncement(fetched.isDataReady);
@@ -95,7 +96,7 @@ export const ViewPage = () => {
 
     const getSpecialCourses = useCallback(async () => {
         try {
-            const fetched = await request(`/api/special_course/get/${schoolId}`, 'GET', null)
+            const fetched = await request(`${settings.url}/api/special_course/get/${schoolId}`, 'GET', null)
             setSpecialCourses(fetched)
             setFlagSpecialCourse(fetched.isDataReady)
         } catch (e) {
@@ -131,7 +132,7 @@ export const ViewPage = () => {
 
     const adSwitcher = () => {
         try {
-            setAdImage({url: `/api/ad/get/${ad.ad[countAd.count]._id}`, date: new Date()});
+            setAdImage({url: `${settings.url}/api/ad/get/${ad.ad[countAd.count]._id}`, date: new Date()});
             setFlagAd(true);
             setCountAd({count: countAd.count + 1});
             if (countAd.count === ad.ad.length - 1) {
@@ -199,17 +200,21 @@ export const ViewPage = () => {
 
                 <div className={style[theme].director}>
                     <h3>Директор</h3>
-                    <h4>
+                    <h5>
                         <svg className={style[theme].phone}/>
-                        {dir.name}</h4>
+                        {dir.phone}
+                    </h5>
+                    <h5>
+                        <svg className={style[theme].email}/>
+                        {dir.email}
+                    </h5>
                 </div>
             </div>
 
 
             <div className={style[theme].firstTable}>
-
                 <TimeBlock time={view.times}  style={style[theme]}/>
-                {Array.from(view.classrooms, classroom => {
+                {Array.from(view.classrooms[0], classroom => {
                     return (
                         <div key={classroom.index}>
                             <ClassBlock
@@ -225,7 +230,7 @@ export const ViewPage = () => {
             <div className={style[theme].secondTable}>
 
                 <TimeBlock time={view.times}  style={style[theme]}/>
-                {Array.from(view.classrooms, classroom => {
+                {Array.from(view.classrooms[1], classroom => {
                     return (
                         <div key={classroom.index}>
                             <ClassBlock

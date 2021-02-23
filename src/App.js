@@ -8,7 +8,6 @@ export default function App() {
     useEffect(() => {
         if (window.location.href.indexOf("/view") === -1) {
             document.getElementById('bodyId').className = 'anotherBack'
-            console.log(111)
         } else {
             document.getElementById('bodyId').className = 'whiteBack'
         }

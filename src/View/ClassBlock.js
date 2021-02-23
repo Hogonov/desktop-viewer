@@ -9,8 +9,8 @@ export const ClassBlock = props => {
             {Array.from(props.subjects, subject => {
                 return (<div className={props.style.subjectBlock} key={subject.index}>
                         <div className={`${props.style.subject} ${subject.update && props.style.change}`}
-                        >{subject.name === '' ? '|' : `${subject.name}`}</div>
-                        <div className={props.style.subjectOffice}>{subject.name === '' ? '|' : `${subject.office}`}</div>
+                        >{subject.name === '' ? '' : `${subject.name}`}</div>
+                        <div className={props.style.subjectOffice}>{subject.name === '' ? '' : `${subject.office}`}</div>
                     </div>
                 )
             })}

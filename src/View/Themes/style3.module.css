@@ -104,6 +104,13 @@
     margin-top: 4px;
     margin-right: 10px;
 }
+.email {
+    background-image: url("../../public/img/email.svg");
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+    margin-right: 10px;
+}
 
 
 
@@ -118,7 +125,7 @@
     width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
 
 
@@ -145,6 +152,7 @@
 .subject {
     border-right: 1px solid black;
     font-family: "Gotham Pro Light", serif;
+    height: 22px;
 }
 
 .courseTime {
@@ -163,6 +171,10 @@
     border-top: 1px solid white;
     border-right: 1px solid white;
     border-left: 1px solid white;
+    height: 23px;
+}
+.lastLessonTime{
+    height: 24px;
 }
 
 .courseTime, .specCourses {
@@ -228,6 +240,7 @@ td {
     border-right: 1px solid black;
     text-align: center;
     font-family: "Gotham Pro Light", serif;
+    height: 22px;
 }
 
 .foot {

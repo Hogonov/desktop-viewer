@@ -6,7 +6,7 @@ import Select from "react-select";
 import {Button} from "react-bootstrap";
 import {Loader} from "../components/Loader";
 import style from './Themes/SelectsViewPage.module.css'
-
+import settings from '../config/settings.json'
 
 export const SelectViewPage = () => {
     const message = useMessage();
@@ -25,7 +25,7 @@ export const SelectViewPage = () => {
 
     const getData = useCallback(async () => {
         try {
-            const fetched = await request(`/api/table/get_school`, 'GET', null);
+            const fetched = await request(`${settings.url}/api/table/get_school`, 'GET', null);
             setOptions(fetched);
         } catch (e) {
 
