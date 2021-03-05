@@ -9,7 +9,9 @@ import style from './Themes/SelectsViewPage.module.css'
 import settings from '../config/settings.json'
 
 export const SelectViewPage = () => {
+    document.getElementById('bodyId').className = 'anotherBack'
     const message = useMessage();
+    const history = useHistory();
     const {loading, request, error, clearError} = useHttp();
     const [options, setOptions] = useState({schools: []});
     const themes = [
@@ -44,7 +46,7 @@ export const SelectViewPage = () => {
         if (form.school === '') {
             message('Выберете школу')
         } else {
-            window.location.href = `/view/${form.school.value}/${form.theme.value}`
+            history.push(`/view/${form.school.value}/${form.theme.value}`)
         }
     }
 

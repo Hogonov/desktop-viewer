@@ -5,13 +5,6 @@ import 'materialize-css';
 
 export default function App() {
     const routes = useRoutes();
-    useEffect(() => {
-        if (window.location.href.indexOf("/view") === -1) {
-            document.getElementById('bodyId').className = 'anotherBack'
-        } else {
-            document.getElementById('bodyId').className = 'whiteBack'
-        }
-    }, [routes])
 
     return (
         <Roter>

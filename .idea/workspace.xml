@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Themes is done, change design start page">
-      <change afterPath="$PROJECT_DIR$/src/config/settings.json" afterDir="false" />
+    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Alpha 0.0.1">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/electron.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ClassBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ClassBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/SelectViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SpecialCourseTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SpecialCourseTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/SelectsViewPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/SelectsViewPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style1.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style1.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style2.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style2.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style3.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style3.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style4.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style4.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/TimeBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TimeBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/ViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +59,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="ts.external.directory.path" value="D:\Programs\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -79,6 +73,34 @@
       <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\src" />
       <recent name="D:\Projects\SchoolSchedulViewer\desktop-viewer\public" />
     </key>
+  </component>
+  <component name="RunManager" selected="npm.electron-pack">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="electron-pack" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="electron-pack" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.electron-pack" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -100,7 +122,10 @@
       <workItem from="1613466173793" duration="1820000" />
       <workItem from="1613539828539" duration="2687000" />
       <workItem from="1613619694728" duration="2477000" />
-      <workItem from="1614059451934" duration="7508000" />
+      <workItem from="1614059451934" duration="7542000" />
+      <workItem from="1614341863686" duration="1183000" />
+      <workItem from="1614603966911" duration="1413000" />
+      <workItem from="1614935346283" duration="6038000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1611580782761</created>
@@ -137,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613389000685</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Alpha 0.0.1">
+      <created>1614079461444</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1614079461444</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +193,8 @@
     <MESSAGE value="relayout is done, need to selection theme" />
     <MESSAGE value="need to selection theme" />
     <MESSAGE value="Themes is done, change design start page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Themes is done, change design start page" />
+    <MESSAGE value="Alpha 0.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha 0.0.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,6 +13,7 @@ import settings from '../config/settings.json'
 
 
 export const ViewPage = () => {
+    document.getElementById('bodyId').className = 'whiteBack'
     const style = {style1, style2, style3, style4}
     const {request} = useHttp();
     const [view, setView] = useState({
