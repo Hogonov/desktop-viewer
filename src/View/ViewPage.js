@@ -2,10 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from "react";
 import {useParams} from 'react-router-dom';
 import {useHttp} from "../hooks/http.hook";
 import {Loader} from "../components/Loader";
-import style1 from './Themes/style1.module.css'
-import style2 from './Themes/style2.module.css'
-import style3 from './Themes/style3.module.css'
-import style4 from './Themes/style4.module.css'
+import style from './Themes/style.module.css'
 import {TimeBlock} from "./TimeBlock";
 import {ClassBlock} from "./ClassBlock";
 import {SpecialCourseTable} from "./SpecialCourseTable";
@@ -13,8 +10,6 @@ import settings from '../config/settings.json'
 
 
 export const ViewPage = () => {
-    document.getElementById('bodyId').className = 'whiteBack'
-    const style = {style1, style2, style3, style4}
     const {request} = useHttp();
     const [view, setView] = useState({
         date: new Date(),
@@ -153,7 +148,7 @@ export const ViewPage = () => {
 
 
     useEffect(() => {
-        clockLauncher();
+        //clockLauncher();
         if (new Date() - view.date >= 60000) {
             setView({...view, date: new Date()});
             getData();
@@ -177,49 +172,53 @@ export const ViewPage = () => {
 
     return (
         <div>
-            <header className={style[theme].header}>
-                <div className={style[theme].timetable}>
+            <header className={style.header}>
+                <div className={style.timetable}>
                     Расписание занятий
                 </div>
-                <hr className={style[theme].hr}/>
-                <div id="time" className={style[theme].time}>
+                <hr className={style.hr}/>
+                <div id="time" className={style.time}>
                     {clock.clock} | {clock.clockDate} | {clock.clockDay} | <h6 style={{display: 'inline-block'}}
-                                                                               className="red-text">{view.editDate}</h6>
+                                                                               className={style.editDate}>{view.editDate}</h6>
                 </div>
             </header>
 
-            <div className={style[theme].container}>
-                <div className={style[theme].logo}>
-                    <img src={dir.urlImage} alt="logo"/>
-                    <h4>{school.name}</h4>
+            <div className={style.container}>
+                <div className={style.logo}>
+                    <img width="10px" src={dir.urlImage} alt="logo"/>
+                    <div className={style.infBlock}>
+                        <div className={style.schoolName}>{school.name}</div>
+                        <div>
+                            <svg className={style.phone}/>
+                            {dir.phone}
+                        </div>
+                        <div>
+                            <svg className={style.email}/>
+                            {dir.email}
+                        </div>
+                    </div>
+
                 </div>
 
-                <div className={style[theme].attention}>
-                    <div className={style[theme].mainAtt}>Объявление</div>
-                    <div className={style[theme].txt}>{announcementText.text}</div>
+                <div className={style.attention}>
+                    <div className={style.mainAtt}>Объявление</div>
+                    <div className={style.txt}>{announcementText.text}</div>
                 </div>
 
-                <div className={style[theme].director}>
+                <div className={style.director}>
                     <h3>Директор</h3>
-                    <h5>
-                        <svg className={style[theme].phone}/>
-                        {dir.phone}
-                    </h5>
-                    <h5>
-                        <svg className={style[theme].email}/>
-                        {dir.email}
-                    </h5>
+                    <h5>{dir.name}</h5>
                 </div>
             </div>
 
 
-            <div className={style[theme].firstTable}>
-                <TimeBlock time={view.times}  style={style[theme]}/>
+            <div className={style.firstTable}>
+                <TimeBlock time={view.times}  style={style}/>
                 {Array.from(view.classrooms[0], classroom => {
                     return (
                         <div key={classroom.index}>
                             <ClassBlock
-                                style={style[theme]}
+                                style={style}
                                 classroomName={classroom.name}
                                 subjects={classroom.subjects}
                                 time={view.times}
@@ -228,14 +227,14 @@ export const ViewPage = () => {
                     )
                 })}
             </div>
-            <div className={style[theme].secondTable}>
+            <div className={style.secondTable}>
 
-                <TimeBlock time={view.times}  style={style[theme]}/>
+                <TimeBlock time={view.times}  style={style}/>
                 {Array.from(view.classrooms[1], classroom => {
                     return (
                         <div key={classroom.index}>
                             <ClassBlock
-                                style={style[theme]}
+                                style={style}
                                 classroomName={classroom.name}
                                 subjects={classroom.subjects}
                                 time={view.times}
@@ -246,18 +245,15 @@ export const ViewPage = () => {
             </div>
 
 
-            <footer className={style[theme].foot}>
+            <footer className={style.foot}>
                 <SpecialCourseTable
-                    style={style[theme]}
+                    style={style}
                     course={specialCourses}
                 />
-                <div className={style[theme].ad}>
+                <div className={style.ad}>
                     <img src={adImage.url} alt="ad"/>
                 </div>
-                <div className={style[theme].qr}>
-                    <img
-                        src="http://qrcoder.ru/code/?localhost%3A3000&8&0"
-                        alt="qr"/>
+                <div className={style.qr}>
                 </div>
             </footer>
 

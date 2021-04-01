@@ -32,14 +32,6 @@
     src: url(./public/fonts/RobotoSlabBold.ttf);
 }
 
-
-.anotherBack{
-    background-color: #F1F1F1;
-}
-.whiteBack {
-    background-color: #ffffff;
-}
-
 html {
     overflow: hidden;
 }
@@ -51,8 +43,8 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
     padding: 20px;
+    background-color: #E8E8E8;
 }
 
 code {

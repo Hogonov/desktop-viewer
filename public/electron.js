@@ -9,12 +9,11 @@ const isDev = require('electron-is-dev');
 let mainWindow;
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 900, height: 680, webPreferences: {devTools: false}});
+  mainWindow = new BrowserWindow({width: 900, height: 680, webPreferences: {devTools: isDev}});
   mainWindow.maximize()
   mainWindow.setFullScreen(true)
   mainWindow.loadURL(isDev ? 'http://localhost:8080' : `file://${path.join(__dirname, '../build/index.html')}`);
-  //mainWindow.webContents.openDevTools() /// закоментить в релизной версии
-  mainWindow.setMenu(null) // for production
+  //mainWindow.setMenu(null) // for production
   mainWindow.on('closed', () => mainWindow = null);
 }
 

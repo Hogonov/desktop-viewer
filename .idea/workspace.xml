@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Alpha 0.0.1">
+    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Alpha 0.0.2">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/electron.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/electron.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/electron.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/SelectViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style1.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style2.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style3.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style4.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TimeBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TimeBlock.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/ViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +130,11 @@
       <workItem from="1614059451934" duration="7542000" />
       <workItem from="1614341863686" duration="1183000" />
       <workItem from="1614603966911" duration="1413000" />
-      <workItem from="1614935346283" duration="6038000" />
+      <workItem from="1614935346283" duration="6197000" />
+      <workItem from="1615371119342" duration="148000" />
+      <workItem from="1617020115036" duration="4276000" />
+      <workItem from="1617034843076" duration="5000" />
+      <workItem from="1617253102907" duration="11904000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1611580782761</created>
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614079461444</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alpha 0.0.2">
+      <created>1614947300193</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1614947300193</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +210,8 @@
     <MESSAGE value="need to selection theme" />
     <MESSAGE value="Themes is done, change design start page" />
     <MESSAGE value="Alpha 0.0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpha 0.0.1" />
+    <MESSAGE value="Alpha 0.0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha 0.0.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

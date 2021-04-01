@@ -9,17 +9,10 @@ import style from './Themes/SelectsViewPage.module.css'
 import settings from '../config/settings.json'
 
 export const SelectViewPage = () => {
-    document.getElementById('bodyId').className = 'anotherBack'
     const message = useMessage();
     const history = useHistory();
     const {loading, request, error, clearError} = useHttp();
     const [options, setOptions] = useState({schools: []});
-    const themes = [
-        {label: 'Оформление 1', value: 'style1'},
-        {label: 'Оформление 2', value: 'style2'},
-        {label: 'Оформление 3', value: 'style3'},
-        {label: 'Оформление 4', value: 'style4'}
-    ]
     const [form, setForm] = useState({
         school: '',
         theme: {label: 'Оформление 1', value: 'style1'},
@@ -46,7 +39,7 @@ export const SelectViewPage = () => {
         if (form.school === '') {
             message('Выберете школу')
         } else {
-            history.push(`/view/${form.school.value}/${form.theme.value}`)
+            history.push(`/view/${form.school.value}`)
         }
     }
 
@@ -68,15 +61,6 @@ export const SelectViewPage = () => {
                     options={options.schools}
                     value={form.school}
                     name="school"
-                />
-                <Select
-                    onChange={changeHandler}
-                    id="theme"
-                    placeholder="Выберите оформление расписания"
-                    className={`${style.selector}`}
-                    options={themes}
-                    value={form.theme}
-                    name="theme"
                 />
                 <Button
                     className={`btn ${style.button}`}

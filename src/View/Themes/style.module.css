@@ -1,8 +1,10 @@
 .header {
     text-align: center;
     font-family: "Courier New";
-    background: #2f4c58;/*1111*/
-    color: #e4dbd9;
+    background: #3A72AB;/*1111*/
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .timetable {
@@ -17,6 +19,8 @@
 
 .hr {
     width: 32%;
+    background-color: white;
+    border-radius: 100%;
 }
 
 .container{
@@ -29,22 +33,43 @@
 .attention {
     padding: 10px;
     margin-left: 5%;
-    background: #e4dbd9;/*1111*/
+    background: #FFFFFF;/*1111*/
     width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .attention div {
 
 }
+.editDate{
+    color: white;
+}
+.infBlock {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+.infBlock > div:not(.schoolName){
+    font-size: 15px;
 
+}
+.schoolName{
+    font-size: 30px;
+}
 .logo {
     padding-left: 10px;
-    background: #e4dbd9;/*1111*/
+    background: #FFFFFF;/*1111*/
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .director {
     padding-left: 10px;
-    background: #e4dbd9;/*1111*/
+    background: #FFFFFF;/*1111*/
+    border-radius: 5px;
     font-family: "Courier New", serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .director h3 {
     margin-top: 10px;
@@ -64,8 +89,8 @@
 .mainAtt {
     font-family: "Courier New Bold", serif;
     font-size: 30px;
-    text-align: center;
     margin-top: -10px;
+    color: #E69B1E;
 }
 
 .txt {
@@ -74,17 +99,12 @@
 
 }
 
-.logo {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-}
-
 .logo img {
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 5px;
-    width: 160px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
 }
 
 .logo h4 {
@@ -112,8 +132,10 @@
 
 
 .hide {
-    background-color: white;
-    color: white;
+    opacity: 0.0;
+    width: 100%;
+    color: #E8E8E8;
+    z-index: -1;
 }
 
 
@@ -123,20 +145,30 @@
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    z-index: 3;
 }
 
 
-.secondTable .timeBlock{
 
+.secondTable{
+    margin-top: 15px;
 }
 
 .timeBlock {
-    margin-right: -6px;
+    margin-top: 22.99px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 15px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
+    background: rgba(232, 232, 232, 1.0);
+}
+.classBlock {
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.19);
+    background: rgba(232, 232, 232, 1.0);
 }
 
 
+
 .classBlock .className {
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
 }
 
 .classBlock tr td {
@@ -147,9 +179,9 @@
     margin-left: 4px;
 }
 .subject {
-    border-right: 1px solid black;
     font-family: "Gotham Pro Light", serif;
     height: 22px;
+    background-color: rgb(245, 245, 245);
 }
 
 .courseTime {
@@ -157,7 +189,7 @@
 }
 
 .className, .lessonTime, .courseTime {
-    background-color: #6795a3; /*1111*/
+    background-color: #7AA5C7; /*1111*/
     font-family: "Gotham Pro bold", serif;
     font-size: 15px;
     text-align: center;
@@ -165,9 +197,7 @@
 }
 
 .lessonTime {
-    border-top: 1px solid white;
-    border-right: 1px solid white;
-    border-left: 1px solid white;
+    border-top: 1px solid #E8E8E8;
     height: 23px;
 }
 .lastLessonTime{
@@ -175,7 +205,7 @@
 }
 
 .courseTime, .specCourses {
-    background-color: #9cb6bc; /*1111*/
+    background-color: #D3E0E9; /*1111*/
 }
 
 
@@ -187,11 +217,13 @@
 
 .courses {
     margin-top: 50px;
+    box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.16), 15px 15px 15px rgba(0, 0, 0, 0.08);
+    background: rgba(232, 232, 232, 1.0);
 }
 
 .hideTh {
-    border-top: 1px solid white;
-    border-left: 1px solid white;
+    border-top: 1px solid #E8E8E8;
+    border-left: 1px solid #E8E8E8;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
 }
@@ -215,14 +247,16 @@ td {
 }
 
 .change {
-    background-color: #88e2ac;/*1111*/
+    background-color: #E69B1D;/*1111*/
 }
 
-
-.qr img{
+.qr{
+    background-image: url("../../public/img/qrCode.svg");
     width: 150px;
     height: 150px;
+    margin-top: 10px;
     margin-left: 34%;
+    z-index: 1;
 }
 
 .ad img {
@@ -230,11 +264,11 @@ td {
     margin-top: 20px;
     height: 100px;
     width: 200px;
+    z-index: 1;
 }
 
 .subjectOffice {
-    background-color: #e4dbd9;/*1111*/
-    border-right: 1px solid black;
+    background-color: #D3E0E9;/*1111*/
     text-align: center;
     font-family: "Gotham Pro Light", serif;
     height: 22px;
@@ -249,6 +283,6 @@ td {
     display: grid;
     grid-template-columns: 2fr 1fr;
     text-align: center;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-top: 1px solid black;
+
 }
