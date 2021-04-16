@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Alpha 0.0.2">
-      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+    <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Alpha 0.0.3 (Change design viewer)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/electron.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/electron.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SelectViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style1.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style2.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style3.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Themes/style4.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/TimeBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TimeBlock.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +121,7 @@
       <workItem from="1615371119342" duration="148000" />
       <workItem from="1617020115036" duration="4276000" />
       <workItem from="1617034843076" duration="5000" />
-      <workItem from="1617253102907" duration="11904000" />
+      <workItem from="1617253102907" duration="13279000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1611580782761</created>
@@ -185,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614947300193</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Alpha 0.0.3 (Change design viewer)">
+      <created>1617276304189</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617276304189</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +205,8 @@
     <MESSAGE value="Themes is done, change design start page" />
     <MESSAGE value="Alpha 0.0.1" />
     <MESSAGE value="Alpha 0.0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpha 0.0.2" />
+    <MESSAGE value="Alpha 0.0.3 (Change design viewer)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha 0.0.3 (Change design viewer)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

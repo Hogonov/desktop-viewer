@@ -19,7 +19,7 @@ export const ViewPage = () => {
         classrooms: []
     });
     const [clock, setClock] = useState({
-        clock: new Date().toLocaleString("ru", {hour: 'numeric', minute: 'numeric'}),
+        clock: new Date().toLocaleString("ru", {hour: 'numeric', minute: 'numeric', second: 'numeric'}),
         clockDate: new Date().toLocaleString("ru", {year: 'numeric', month: 'long', day: 'numeric'}),
         clockDay: new Date().toLocaleString("ru", {weekday: 'long'})
     });
