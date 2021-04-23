@@ -1,9 +1,9 @@
 .header {
     text-align: center;
-    font-family: "Courier New";
+    font-family: "Courier New", serif;
     background: #3A72AB;/*1111*/
     color: white;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -29,14 +29,17 @@
     margin-top: 35px;
     margin-bottom: 35px;
 }
-
+.attention, .director{
+    padding: 20px;
+    /*border-radius: 5px;*/
+}
+.attention, .director, .logo {
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15), 0 6px 10px 0 rgba(0, 0, 0, 0.12);
+}
 .attention {
-    padding: 10px;
     margin-left: 5%;
     background: #FFFFFF;/*1111*/
     width: 90%;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .attention div {
 
@@ -49,8 +52,7 @@
     margin-top: 10px;
 }
 .infBlock > div:not(.schoolName){
-    font-size: 15px;
-
+    font-size: 14px;
 }
 .schoolName{
     font-size: 30px;
@@ -58,18 +60,13 @@
 .logo {
     padding-left: 10px;
     background: #FFFFFF;/*1111*/
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
 .director {
-    padding-left: 10px;
     background: #FFFFFF;/*1111*/
-    border-radius: 5px;
     font-family: "Courier New", serif;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .director h3 {
     margin-top: 10px;
@@ -94,9 +91,8 @@
 }
 
 .txt {
-    font-family: "Gotham Pro Light", serif;
-    font-size: 16px;
-
+    font-family: "Gotham Pro", serif;
+    font-size: 14px;
 }
 
 .logo img {
@@ -116,16 +112,16 @@
 
 .phone {
     background-image: url("../../public/img/phone.svg");
-    width: 20px;
-    height: 20px;
-    margin-top: 4px;
+    width: 19px;
+    height: 19px;
+    margin-top: 6px;
     margin-right: 10px;
 }
 .email {
     background-image: url("../../public/img/email.svg");
-    width: 20px;
-    height: 20px;
-    margin-top: 4px;
+    width: 19px;
+    height: 19px;
+    margin-top: 6px;
     margin-right: 10px;
 }
 
@@ -144,7 +140,7 @@
     width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: 3fr repeat(8, 4fr);
     z-index: 3;
 }
 
@@ -156,13 +152,14 @@
 
 .timeBlock {
     margin-top: 23.99px;
-    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 0 15px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.17), 0 7px 10px 0 rgba(0, 0, 0, 0.15);
+    /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px rgba(0, 0, 0, 0.19);*/
     z-index: 1;
     background: rgba(232, 232, 232, 1.0);
     border-radius: 5px;
 }
 .classBlock {
-    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.17), 0 6px 8px rgba(0, 0, 0, 0.15);
     background: rgba(232, 232, 232, 1.0);
     border-radius: 5px;
 }
@@ -180,25 +177,22 @@
 .classBlock {
     margin-left: 4px;
 }
-.subject {
-    font-family: "Gotham Pro", serif;
-    height: 23px;
-    background-color: rgb(245, 245, 245);
-}
 
 .courseTime {
     text-align: center;
 }
 
 .className, .lessonTime, .courseTime {
-    /*background-color: #7AA5C7; !*1111*!*/
-    background-color: #4182C3; /*1111*/
+    background-color: #4182C3;
     color: white;
     font-family: "Gotham Pro bold", serif;
     font-size: 15px;
     text-align: center;
     border: black;
     height: 23px;
+}
+.courseTime{
+	color: black;
 }
 
 .lessonTime {
@@ -222,13 +216,13 @@
 
 .specCourses {
     padding: 2px 0 0 10px;
-    font-family: "Courier New", serif;
+     font-family: "Gotham Pro bold", serif;
     border: 1px solid black;
 }
 
 .courses {
     margin-top: 50px;
-    box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.16), 15px 15px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1), 10px 10px 10px rgba(0, 0, 0, 0.08);
     background: rgba(232, 232, 232, 1.0);
 }
 
@@ -258,7 +252,7 @@ td {
 }
 
 .change {
-    background-color: #ffc072;/*1111*/
+    background-color: #ffc072 !important;/*1111*/
 }
 
 .qr{
@@ -277,6 +271,11 @@ td {
     width: 200px;
     z-index: 1;
 }
+.subject {
+    font-family: "Gotham Pro", serif;
+    height: 23px;
+    background-color: rgb(245, 245, 245);
+}
 
 .subjectOffice {
     background-color: #D3E0E9;/*1111*/
@@ -292,15 +291,19 @@ td {
 
 .subjectBlock {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     text-align: center;
     border-top: 1px solid black;
     height: 24px;
 }
 .lastSubjectBlock > .subject{
-    border-radius: 0 0 0 5px;
+    /*border-radius: 0 0 0 5px;*/
 }
 
 .lastSubjectBlock > .subjectOffice{
-    border-radius: 0 0 5px 0;
+    /*border-radius: 0 0 5px 0;*/
+}
+
+.pastLesson {
+    background-color: #9d9d9d;
 }

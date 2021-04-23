@@ -1,9 +1,9 @@
 import React from 'react'
 
 export const Loader = () => (
-  <div style={{display: 'flex', marginTop: '100px', justifyContent: 'center' }}>
+  <div style={{display: 'flex', marginTop: '20%', justifyContent: 'center' }}>
     <div className="preloader-wrapper active">
-      <div className="spinner-layer spinner-red-only">
+      <div className="spinner-layer spinner-blue-only">
         <div className="circle-clipper left">
           <div className="circle" />
         </div>

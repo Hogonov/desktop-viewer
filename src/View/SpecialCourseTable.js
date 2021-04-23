@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from "react";
+import React from "react";
 
 
 export const SpecialCourseTable = props => {
@@ -15,16 +15,19 @@ export const SpecialCourseTable = props => {
                 <tbody>
                 <tr>
                     {Array.from(props.course.specialCourse, course => {
-                        return (<>
-                                <td className={props.style.courseTime}>{course.time}</td>
-                                <td className={props.style.courseName}>{course.name}</td>
-                            </>
-                        )
+                        try {
+                            return (<>
+                                    <td className={props.style.courseTime}>{course.time}</td>
+                                    <td className={props.style.courseName}>{course.name}</td>
+                                </>
+                            )
+                        } catch (e) {
+
+                        }
                     })}
                 </tr>
                 </tbody>
             </>}
-
         </table>
     )
 }

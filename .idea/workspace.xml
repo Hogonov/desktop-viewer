@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6030676c-71a7-4357-8d97-1839787acb71" name="Default Changelist" comment="Alpha 0.0.3 (Change design viewer)">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/electron.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/electron.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ClassBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ClassBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SelectViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SelectViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SpecialCourseTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SpecialCourseTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Themes/style.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Themes/style.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TimeBlock.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TimeBlock.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ViewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ViewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +59,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SchoolSchedulReactVersion" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -122,6 +139,10 @@
       <workItem from="1617020115036" duration="4276000" />
       <workItem from="1617034843076" duration="5000" />
       <workItem from="1617253102907" duration="13279000" />
+      <workItem from="1618576691315" duration="72000" />
+      <workItem from="1619064567270" duration="1314000" />
+      <workItem from="1619087915443" duration="7709000" />
+      <workItem from="1619146116384" duration="13275000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1611580782761</created>

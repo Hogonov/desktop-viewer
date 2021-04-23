@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useRoutes} from "./routes";
 import {BrowserRouter as Roter} from 'react-router-dom';
 import 'materialize-css';

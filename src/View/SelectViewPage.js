@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import {useMessage} from "../hooks/message.hook";
 import {useHistory} from 'react-router-dom'
 import {useHttp} from "../hooks/http.hook";
@@ -11,7 +11,7 @@ import settings from '../config/settings.json'
 export const SelectViewPage = () => {
     const message = useMessage();
     const history = useHistory();
-    const {loading, request, error, clearError} = useHttp();
+    const {loading, request} = useHttp();
     const [options, setOptions] = useState({schools: []});
     const [form, setForm] = useState({
         school: '',
@@ -28,18 +28,27 @@ export const SelectViewPage = () => {
     }, [request]);
 
     useEffect(() => {
-        getData();
+        try {
+            getData().then()
+        } catch (e) {
+        }
     }, [getData]);
 
 
     const changeHandler = (event, action) => {
-        setForm({...form, [action.name]: event});
+        try {
+            setForm({...form, [action.name]: event})
+        } catch (e) {
+        }
     };
     const viewHandler = () => {
-        if (form.school === '') {
-            message('Выберете школу')
-        } else {
-            history.push(`/view/${form.school.value}`)
+        try {
+            if (form.school === '') {
+                message('Выберете школу')
+            } else {
+                history.push(`/view/${form.school.value}`)
+            }
+        } catch (e) {
         }
     }
 
