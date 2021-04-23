@@ -39,7 +39,7 @@
   },
   "build": {
     "appId": "com.example.electron-react",
-    "productName": "Расписание",
+    "productName": "Расписание ITШкола",
     "files": [
       "build/**/*",
       "node_modules/**/*",
