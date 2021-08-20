@@ -16,9 +16,9 @@ function createWindow() {
         icon: './public/blueLogoItSchool.ico'
     })
     mainWindow.maximize()
-    mainWindow.setFullScreen(true)
+    // mainWindow.setFullScreen(true)
     mainWindow.loadURL(isDev ? 'http://localhost:8080' : `file://${path.join(__dirname, '../build/index.html')}`)
-    mainWindow.setMenu(null) // for production
+    // mainWindow.setMenu(null) // for production
     mainWindow.on('closed', () => mainWindow = null);
 }
 
